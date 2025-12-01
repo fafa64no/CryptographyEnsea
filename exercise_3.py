@@ -5,6 +5,8 @@ MSG_ALPHABET = [
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
     'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
 ]
+MSG_ALPHABET_INDEX = {ch: i for i, ch in enumerate(MSG_ALPHABET)}
+
 DEFAULT_MAX_KEY_SIZE = 20
 FRENCH_IC = 0.0778
 FRENCH_PERCENTAGES = {
@@ -114,9 +116,21 @@ def get_most_probable_key(data: str) -> str:
 
     return probable_key
 
+def decrypt_message(ciphered_text: str, key: str) -> str:
+    plaintext_chars = []
+    key_len = len(key)
+
+    for i, c in enumerate(ciphered_text):
+        c_idx = MSG_ALPHABET_INDEX[c]
+        k_idx = MSG_ALPHABET_INDEX[key[i % key_len]]
+        p_idx = (c_idx - k_idx) % len(MSG_ALPHABET)
+        plaintext_chars.append(MSG_ALPHABET[p_idx])
+
+    return "".join(plaintext_chars)
 
 
 print(f"MSG_TO_DECODE: {MSG_TO_DECODE}")
 print(f"Coincidence number: {calc_coincidence_number(MSG_TO_DECODE):.4f}")
 print(f"Best subsequence number: {find_best_subsequence_coincidence_number(MSG_TO_DECODE)}")
 print(f"Most likely key: {get_most_probable_key(MSG_TO_DECODE)}")
+print(f"Most likely message is:\n{decrypt_message(MSG_TO_DECODE, get_most_probable_key(MSG_TO_DECODE))}")
