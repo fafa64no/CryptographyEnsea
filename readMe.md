@@ -10,13 +10,13 @@ C’est l’autorité intermédiaire chargée de signer le certificat de google.
 
 Identité du site :
 
-```
+
 CN = *.google.com
 O = Google LLC
 L = Mountain View
 ST = California
 C = US
-```
+
 
 Le CN (Common Name) indique que le certificat couvre **tous les sous-domaines** de google.com.
 
@@ -39,8 +39,8 @@ Google utilise des certificats **courte durée** pour renforcer la sécurité.
 
 Cela signifie :
 
-* hachage du certificat → SHA‑256
-* signature elliptique → ECDSA
+* hachage du certificat :  SHA‑256
+* signature elliptique  : ECDSA
 
 ### **Empreintes (Fingerprints)**
 
@@ -50,4 +50,92 @@ Exemples typiques :
 * **SHA‑1 Fingerprint** : empreinte de 40 hex chars (dépréciée)
 
 
+## Question 2.2
 
+Une CA (Certificate Authority) est un organisme de confiance qui :
+
+* vérifie l’identité d’un site
+
+* émet un certificat
+
+* signe ce certificat avec sa clé privée
+
+Elle est au cœur de l’infrastructure PKI et permet au navigateur de savoir si un site est fiable.
+
+Pour google.com, la CA finale est : Google Trust Services LLC.
+
+
+
+## Question 2.3
+
+La chaîne de certification de google.com ressemble à ceci :
+
+Root CA (racine) — auto‑signée
+GlobalSign Root R3 ou GTS Root R1 (selon période)
+
+Intermediate CA
+Google Trust Services LLC
+
+Leaf certificate (certificat du site)
+.google.com
+
+Le navigateur vérifie chaque maillon jusqu’à la racine.
+
+
+## Question 2.4
+
+Si un certificat est compromis, il peut être révoqué.
+
+Deux méthodes sont utilisées :
+
+1. OCSP (Online Certificate Status Protocol)
+
+Le navigateur interroge un serveur pour connaître l’état du certificat.
+
+2. CRL (Certificate Revocation List)
+
+Liste de certificats révoqués publiée périodiquement par la CA.
+
+Si une révocation est détectée donc le navigateur affiche un avertissement.
+
+
+## Question 2.5
+
+Subject Alternative Name (SAN)
+
+Liste des domaines couverts :
+
+*.google.com
+google.com
+*.gstatic.com
+*.googleapis.com
+
+Cette extension est OBLIGATOIRE pour tous les certificats modernes.
+
+Key Usage
+
+Définit ce que la clé peut faire :
+
+* Digital Signature
+
+* Key Encipherment (selon les versions)
+
+* Extended Key Usage (EKU)
+
+* TLS Web Server Authentication
+
+* TLS Web Client Authentication
+
+Ces extensions précisent les usages autorisés du certificat.
+
+## Question 2.6
+
+Un certificat auto‑signé est un certificat où :
+
+issuer = subject
+
+la signature est générée par la clé privée du même certificat
+
+C’est le cas des certificats racines inclus dans Windows, macOS, iOS, Android…
+
+Un certificat auto‑signé pour un site Web normal : n’est PAS fiable, le navigateur affiche une alerte.
