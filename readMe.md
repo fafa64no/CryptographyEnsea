@@ -127,3 +127,15 @@ Définit ce que la clé peut faire :
 * TLS Web Client Authentication
 
 Ces extensions précisent les usages autorisés du certificat.
+
+## Question 2.6
+
+Un certificat auto‑signé est un certificat où :
+
+issuer = subject
+
+la signature est générée par la clé privée du même certificat
+
+C’est le cas des certificats racines inclus dans Windows, macOS, iOS, Android…
+
+Un certificat auto‑signé pour un site Web normal : n’est PAS fiable, le navigateur affiche une alerte.
