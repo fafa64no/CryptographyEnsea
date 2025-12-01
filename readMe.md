@@ -10,13 +10,13 @@ C’est l’autorité intermédiaire chargée de signer le certificat de google.
 
 Identité du site :
 
-```
+
 CN = *.google.com
 O = Google LLC
 L = Mountain View
 ST = California
 C = US
-```
+
 
 Le CN (Common Name) indique que le certificat couvre **tous les sous-domaines** de google.com.
 
@@ -65,3 +65,18 @@ Elle est au cœur de l’infrastructure PKI et permet au navigateur de savoir si
 Pour google.com, la CA finale est : Google Trust Services LLC.
 
 
+
+## Question 2.3
+
+La chaîne de certification de google.com ressemble à ceci :
+
+Root CA (racine) — auto‑signée
+GlobalSign Root R3 ou GTS Root R1 (selon période)
+
+Intermediate CA
+Google Trust Services LLC
+
+Leaf certificate (certificat du site)
+.google.com
+
+Le navigateur vérifie chaque maillon jusqu’à la racine.
