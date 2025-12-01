@@ -50,4 +50,18 @@ Exemples typiques :
 * **SHA‑1 Fingerprint** : empreinte de 40 hex chars (dépréciée)
 
 
+## Question 2.2
+
+Une CA (Certificate Authority) est un organisme de confiance qui :
+
+* vérifie l’identité d’un site
+
+* émet un certificat
+
+* signe ce certificat avec sa clé privée
+
+Elle est au cœur de l’infrastructure PKI et permet au navigateur de savoir si un site est fiable.
+
+Pour google.com, la CA finale est : Google Trust Services LLC.
+
 
