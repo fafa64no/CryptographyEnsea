@@ -39,8 +39,8 @@ Google utilise des certificats **courte durée** pour renforcer la sécurité.
 
 Cela signifie :
 
-* hachage du certificat → SHA‑256
-* signature elliptique → ECDSA
+* hachage du certificat :  SHA‑256
+* signature elliptique  : ECDSA
 
 ### **Empreintes (Fingerprints)**
 
@@ -80,3 +80,22 @@ Leaf certificate (certificat du site)
 .google.com
 
 Le navigateur vérifie chaque maillon jusqu’à la racine.
+
+
+## Question 2.4
+
+Si un certificat est compromis, il peut être révoqué.
+
+Deux méthodes sont utilisées :
+
+1. OCSP (Online Certificate Status Protocol)
+
+Le navigateur interroge un serveur pour connaître l’état du certificat.
+
+2. CRL (Certificate Revocation List)
+
+Liste de certificats révoqués publiée périodiquement par la CA.
+
+Si une révocation est détectée donc le navigateur affiche un avertissement.
+
+
