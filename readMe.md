@@ -99,3 +99,31 @@ Liste de certificats révoqués publiée périodiquement par la CA.
 Si une révocation est détectée donc le navigateur affiche un avertissement.
 
 
+## Question 2.5
+
+Subject Alternative Name (SAN)
+
+Liste des domaines couverts :
+
+*.google.com
+google.com
+*.gstatic.com
+*.googleapis.com
+
+Cette extension est OBLIGATOIRE pour tous les certificats modernes.
+
+Key Usage
+
+Définit ce que la clé peut faire :
+
+* Digital Signature
+
+* Key Encipherment (selon les versions)
+
+* Extended Key Usage (EKU)
+
+* TLS Web Server Authentication
+
+* TLS Web Client Authentication
+
+Ces extensions précisent les usages autorisés du certificat.
