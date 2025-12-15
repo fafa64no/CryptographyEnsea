@@ -211,3 +211,6 @@ Les acteurs du réseau sont : les nœuds, les mineurs, les pools de minage et le
 Bitcoin traite environ 3 à 7 TPS (1 bloc toutes les 10 minutes).
 Visa traite environ 1 700 TPS en moyenne (jusqu’à ~24 000 TPS).
 Bitcoin est beaucoup plus lent que les systèmes de paiement traditionnels.
+## Question 4.40
+Le Proof of Work consomme beaucoup d’énergie, ce qui a un impact environnemental élevé.
+Les alternatives comme le Proof of Stake réduisent fortement la consommation d’énergie.
