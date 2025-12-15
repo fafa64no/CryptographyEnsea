@@ -204,5 +204,8 @@ Nombre de tentatives nécessaires pour le bloc 924561 :  en  moyenne  difficult�
 ## Question 4.4.8 Questions de synthèse
 ## Question 4.37
 La blockchain est une chaîne de blocs liés par des hashs cryptographiques. Modifier une transaction passée changerait tous les blocs suivants, ce qui est pratiquement impossible sans contrôler la majorité du réseau.
+## Question 4.38 
+Bitcoin est décentralisé car aucune autorité centrale ne le contrôle.
+Les acteurs du réseau sont : les nœuds, les mineurs, les pools de minage et les utilisateurs.
 
 
