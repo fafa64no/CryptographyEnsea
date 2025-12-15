@@ -188,4 +188,21 @@ condition mathématique du hash :  SHA256(SHA256(header)) < target
 Nombre de tentatives nécessaires pour le bloc 924561 :  en  moyenne  difficulté × 2³² tentatives
 
 
+## Question 4.4.7   Analyse pratique
+
+1. Numéro du bloc : 924561 
+2. Hash du bloc : 00000000000000000000908cc8e84ab095256df9707e15efa900801bfb7e4e79 
+3. Hash du bloc précédent : 000000000000000000009154745bf36313ff3838de2dcb7fb8930b5e185ff186 
+4. Timestamp (date et heure) : 2025-11-21 13:58:32 (10 days ago) 
+5. Nombre de transactions : 3787
+6. Taille du bloc :  1.51 MB
+7. Difficulté : 
+8. Nonce :
+9. Récompense totale du mineur (block reward + fees) : 0.072 BTC  
+10. Pool de minage ayant trouvé ce bloc :  "/AntPool/", "Mined By AntPool", "Mined by AntPool" 
+
+## Question 4.4.8 Questions de synthèse
+## Question 4.37
+La blockchain est une chaîne de blocs liés par des hashs cryptographiques. Modifier une transaction passée changerait tous les blocs suivants, ce qui est pratiquement impossible sans contrôler la majorité du réseau.
+
 
