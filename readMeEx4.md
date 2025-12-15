@@ -214,3 +214,6 @@ Bitcoin est beaucoup plus lent que les systèmes de paiement traditionnels.
 ## Question 4.40
 Le Proof of Work consomme beaucoup d’énergie, ce qui a un impact environnemental élevé.
 Les alternatives comme le Proof of Stake réduisent fortement la consommation d’énergie.
+## Question 4.41
+Le hashrate du réseau Bitcoin est élevé et globalement en hausse sur les 6 derniers mois.
+Cela indique une sécurité accrue et une forte participation des mineurs.
