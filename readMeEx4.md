@@ -207,5 +207,7 @@ La blockchain est une chaîne de blocs liés par des hashs cryptographiques. Mod
 ## Question 4.38 
 Bitcoin est décentralisé car aucune autorité centrale ne le contrôle.
 Les acteurs du réseau sont : les nœuds, les mineurs, les pools de minage et les utilisateurs.
-
-
+## Question 4.39 
+Bitcoin traite environ 3 à 7 TPS (1 bloc toutes les 10 minutes).
+Visa traite environ 1 700 TPS en moyenne (jusqu’à ~24 000 TPS).
+Bitcoin est beaucoup plus lent que les systèmes de paiement traditionnels.
