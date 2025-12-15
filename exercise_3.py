@@ -103,11 +103,16 @@ def decrypt_message(ciphered_text: str, key: str) -> str:
     plaintext_chars = []
     key_len = len(key)
 
-    for i, c in enumerate(ciphered_text):
-        c_idx = MSG_ALPHABET_INDEX[c]
-        k_idx = MSG_ALPHABET_INDEX[key[i % key_len]]
-        p_idx = (c_idx - k_idx) % len(MSG_ALPHABET)
-        plaintext_chars.append(MSG_ALPHABET[p_idx])
+    i: int = 0
+    for c in ciphered_text:
+        if c not in MSG_ALPHABET:
+            plaintext_chars.append(c)
+        else:
+            c_idx = MSG_ALPHABET_INDEX[c]
+            k_idx = MSG_ALPHABET_INDEX[key[i % key_len]]
+            p_idx = (c_idx - k_idx) % len(MSG_ALPHABET)
+            plaintext_chars.append(MSG_ALPHABET[p_idx])
+            i += 1
 
     return "".join(plaintext_chars)
 
@@ -116,4 +121,4 @@ print(f"MSG_TO_DECODE: {MSG_TO_DECODE}")
 print(f"Coincidence number: {calc_coincidence_number(MSG_TO_DECODE):.4f}")
 print(f"Best subsequence number: {find_best_subsequence_coincidence_number(MSG_TO_DECODE)}")
 print(f"Most likely key: {get_most_probable_key(MSG_TO_DECODE)}")
-print(f"Most likely message is:\n{decrypt_message(MSG_TO_DECODE, get_most_probable_key(MSG_TO_DECODE))}")
+print(f"Most likely message is:\n{decrypt_message(FULL_MSG_TO_DECODE, get_most_probable_key(MSG_TO_DECODE))}")

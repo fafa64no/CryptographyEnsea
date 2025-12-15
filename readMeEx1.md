@@ -1,4 +1,4 @@
-# Exercice 1 -  Découverte des fonctions de hachage (MD5 et SHA-1)
+# Exercice 1 - Découverte des fonctions de hachage (MD5 et SHA-1)
 ## Question 1.1
 
 Une exécution de [exercise_1.py](exercise_1.py) nous donne :

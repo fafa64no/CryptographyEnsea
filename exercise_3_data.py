@@ -1,4 +1,5 @@
-MSG_TO_DECODE = open("data/Exo3.txt").read().replace(" ", "").replace("\n", "")
+FULL_MSG_TO_DECODE = open("data/Exo3.txt").read()
+MSG_TO_DECODE = FULL_MSG_TO_DECODE.replace(" ", "").replace("\n", "")
 MSG_ALPHABET = [
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
     'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
